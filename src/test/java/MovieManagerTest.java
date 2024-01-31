@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MovieManagerTest {
     private final Movie movie1 = new Movie(1, "Бладшот", "боевик");
@@ -9,7 +10,7 @@ public class MovieManagerTest {
     private final Movie movie6 = new Movie(6, "Тролли. Мировой тур", "мультфильм");
     private final Movie movie7 = new Movie(7, "Номер один", "комедия");
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldAddMovie() {
         MovieManager movie = new MovieManager();
         movie.add(movie1);
@@ -20,7 +21,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldFindAllLimit() {
         MovieManager movie = new MovieManager();
 
@@ -38,7 +39,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void lastAdded() {
         MovieManager movie = new MovieManager();
 
@@ -56,7 +57,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldFindAllLimit3() {
         MovieManager movie = new MovieManager(3);
 
@@ -74,7 +75,7 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldFindAllLimit7() {
         MovieManager movie = new MovieManager(7);
 
